@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Мирэль</title>
+    <link href="css/style.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="wrapper">
+        <header class="header-logo">
+            <div class="container">
+                <div class="header__logo">
+                    <a class="header__logo-title" href="index.html"> Мирэль </a>
+                    <div class="nav-toggle">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <header class="header-nav">
+            <div class="container">
+                <nav class="header__menu">
+                    <ul class="header__menu-list">
+                        <li><a href="index.html">Главная</a></li>
+                        <li><a href="about.html">О компании</a></li>
+                        <li><a href="method.html">Методика</a></li>
+                        <li><a href="algorithm.html">Алгоритм исследования</a></li>
+                        <li><a href="science.html">Научные работы</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+        <section class="about-section">
+            <div class="about-section__wrap">
+                <div class="about-section__text">
+                    <h1>О нас</h1>
+                    <p>Наша компания (ООО «Мирэль») создана с целью исследования, разработки и последующей коммерциализации результатов нашего труда в области диагностики заболеваний щитовидной железы.</p>
+                    <p>В последующем мы планируем исследования в других перспективных направлениях.</p>
+                </div>
+            </div>
+        </section>
+        <section class="about-section-staff">
+            <div class="about-section-staff__imageblock imageblock4">
+                <div class="about-section-staff__wrap">
+                    <h1>Ведущие специалисты</h1>
+                    <figure class="about-section-staff__figure">
+                        <img src="img/staff-1.JPG" alt="img" width="247" height="227">
+                        <figcaption class="about-section-staff__fig">
+                            <h2>Титов Сергей Евгеньевич</h2>
+                            <p>Кандидат биологических наук, Старший научный сотрудник в ИМКБ СО РАН, а также в АО "Вектор-Бест".</p>
+                        </figcaption>
+                    </figure>
+                    <figure class="about-section-staff__figure">
+                        <img src="img/staff-4.png" alt="img" width="247" height="227">
+                        <figcaption class="about-section-staff__fig">
+                            <h2>Веряскина Юлия Андреевна</h2>
+                            <p>Кандидат биологических наук, Старший научный сотрудник в ИМКБ СО РАН.</p>
+                        </figcaption>
+                    </figure>
+                    <figure class="about-section-staff__figure">
+                        <img src="img/staff-2.JPG" alt="img" width="372" height="310">
+                        <figcaption class="about-section-staff__fig">
+                            <h2>Жимулев Игорь Федорович</h2>
+                            <p> Научный руководитель Института молекулярной и клеточной биологии СО РАН академик РАН.</p>
+                        </figcaption>
+                    </figure>
+                </div>
+                <div class="imageblock4__bg ibg"><img src="img/about-bcg.png" alt=""></div>
+            </div>
+        </section>
+        <section class="section-form">
+            <div class="section-form__wrap">
+                <form action="" method="POST" class="section-form__form">
+                    <div class="section-form__inform">
+                        <h1>Если у вас есть вопрос, вы можете оставить его в данной форме</h1>
+                        <div class="section-form__inform-wrap">
+                            <input type="text" class="section-form__inform-name" placeholder="Ваше имя" id="name" v-model="name">
+                            <input type="text" class="section-form__inform-mail" placeholder="Ваша почта" id="mail" v-model="phone">
+                        </div>
+                        <textarea id="comment" name="comment" cols="40" rows="3" placeholder="Напишите здесь, чтобы вы хотели спросить у нас"></textarea>
+                    </div>
+                    <div class="section-form__communication">
+                        <img src="img/pain.png" alt="Иконка" width="127" height="124">
+                        <p>После того, как мы обработаем ваш вопрос, ответ придёт к вам на почту</p>
+                        <input type="button" value="Отправить" class="section-form__button">
+                    </div>
+                </form>
+            </div>
+        </section>
+        <footer class="footer-block">
+            <div class="footer-block__container">
+                <div class="footer-block__info footer">
+                    <!-- 33,333% -->
+                    <div class="footer__list">
+                        <a href="#">info@rtpcr.ru</a>
+
+                    </div>
+                    <div class="footer__partners">
+                        <p>Мирэль</p>
+                    </div>
+                    <div class="footer__contact">
+                        <span class="footer__contact-item">designed by BrightstarMountain</span>
+                    </div>
+
+                </div>
+            </div>
+        </footer>
+    </div>
+</body>
+<script>
+    function sendForm() {
+        let name = document.getElementById('name').value;
+        let mail = document.getElementById('mail').value;
+        let comment = document.getElementById('comment').value;
+
+        const request = new XMLHttpRequest();
+        const url = 'back.php';
+        const body = "name=" + name + "&mail=" + mail + "&comment=" + comment;
+
+        request.open('POST', url, true);
+        request.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+
+        console.log(body);
+        request.send(body);
+    }
+</script>
+<script src="js/script.js"></script>
+
+</html>
