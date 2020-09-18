@@ -854,7 +854,7 @@ a {
 
 @media (max-width: 770px) {
   .section-algorithm__title h1 {
-    font-size: 30px;
+    font-size: 40px;
   }
 }
 
@@ -1124,7 +1124,10 @@ a {
 
 @media (max-width: 1100px) {
   .about-section__wrap {
-    padding: 48px 20px 83px 20px;
+    padding: 20px 20px 83px 20px;
+  }
+  .about-section__text h1 {
+    font-size: 40px;
   }
 }
 
@@ -1294,7 +1297,7 @@ a {
     margin: 0px;
   }
   .metod-section__title h1 {
-    font-size: 30px;
+    font-size: 40px;
   }
   .metod-section__text p {
     line-height: 20px;
@@ -2144,9 +2147,11 @@ a {
     padding: 0px 0px 16px 0px;
   }
   .science-title__block h1 {
-    font-weight: 500;
-    font-size: 30px;
-    line-height: 50px;
+    line-height: 52px;
+    padding: 20px 0px 0px 0px;
+    font-weight: 400;
+    font-size: 40px;
+    margin: 0px 0px 10px 0px;
   }
 }
 
@@ -2592,6 +2597,15 @@ a {
   }
   .footer__contact img {
     margin-bottom: 20px;
+  }
+}
+
+@media (max-width: 990px) and (max-width: 900px) {
+  .footer .footer__list {
+    padding: 0px 0px 20px 0px;
+  }
+  .footer .footer__partners {
+    padding: 0px 0px 20px 0px;
   }
 }
 
