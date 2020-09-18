@@ -40,7 +40,9 @@
             <div class="about-section__wrap">
                 <div class="about-section__text">
                     <h1>О нас</h1>
-                    <p>Наша компания (ООО «Мирэль») создана с целью исследования, разработки и последующей коммерциализации результатов нашего труда в области диагностики заболеваний щитовидной железы.</p>
+                    <p>Наша компания (ООО «Мирэль») создана с целью исследования, разработки и последующей
+                        коммерциализации результатов нашего труда в области диагностики заболеваний щитовидной железы.
+                    </p>
                     <p>В последующем мы планируем исследования в других перспективных направлениях.</p>
                 </div>
             </div>
@@ -53,21 +55,23 @@
                         <img src="img/staff-1.jpg" alt="img" width="247" height="227">
                         <figcaption class="about-section-staff__fig">
                             <h2>Титов Сергей Евгеньевич</h2>
-                            <p>Кандидат биологических наук, Старший научный сотрудник в ИМКБ СО РАН, а также в АО "Вектор-Бест".</p>
+                            <p>Кандидат биологических наук, Старший научный сотрудник в ИМКБ СО РАН, а также в АО
+                                "Вектор-Бест".</p>
                         </figcaption>
                     </figure>
                     <figure class="about-section-staff__figure">
-                        <img src="img/staff-4.png" alt="img" width="247" height="227">
+                        <img src="img/staff-3.png" alt="img" width="247" height="227">
                         <figcaption class="about-section-staff__fig">
                             <h2>Веряскина Юлия Андреевна</h2>
                             <p>Кандидат биологических наук, Старший научный сотрудник в ИМКБ СО РАН.</p>
                         </figcaption>
                     </figure>
                     <figure class="about-section-staff__figure">
-                        <img src="img/staff-2.jpg" alt="img" width="372" height="310">
+                        <img src="img/staff-2.jpg" alt="img" width="247" height="227">
                         <figcaption class="about-section-staff__fig">
                             <h2>Жимулев Игорь Федорович</h2>
-                            <p> Научный руководитель Института молекулярной и клеточной биологии СО РАН академик РАН.</p>
+                            <p> Научный руководитель Института молекулярной и клеточной биологии СО РАН академик РАН.
+                            </p>
                         </figcaption>
                     </figure>
                 </div>
@@ -78,16 +82,19 @@
             <div class="section-form__wrap">
                 <form action="" method="POST" class="section-form__form">
                     <div class="section-form__inform">
-                        <h1>Если у вас есть вопрос, вы можете оставить его в данной форме</h1>
+                        <h1>Если у Вас есть вопрос, Вы можете оставить его в данной форме</h1>
                         <div class="section-form__inform-wrap">
-                            <input type="text" class="section-form__inform-name" placeholder="Ваше имя" id="name" v-model="name">
-                            <input type="text" class="section-form__inform-mail" placeholder="Ваша почта" id="mail" v-model="phone">
+                            <input type="text" class="section-form__inform-name" placeholder="Ваше имя" id="name"
+                                v-model="name">
+                            <input type="text" class="section-form__inform-mail" placeholder="Ваша почта" id="mail"
+                                v-model="phone">
                         </div>
-                        <textarea id="comment" name="comment" cols="40" rows="3" placeholder="Напишите здесь, чтобы вы хотели спросить у нас"></textarea>
+                        <textarea id="comment" name="comment" cols="40" rows="3"
+                            placeholder="Напишите здесь, чтобы вы хотели спросить у нас"></textarea>
                     </div>
                     <div class="section-form__communication">
                         <img src="img/pain.png" alt="Иконка" width="127" height="124">
-                        <p>После того, как мы обработаем ваш вопрос, ответ придёт к вам на почту</p>
+                        <p>После того, как мы обработаем Ваш вопрос, ответ придёт к Вам на почту</p>
                         <input type="button" value="Отправить" class="section-form__button">
                     </div>
                 </form>
@@ -125,8 +132,6 @@
 
         request.open('POST', url, true);
         request.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
-
-        console.log(body);
         request.send(body);
     }
 </script>
